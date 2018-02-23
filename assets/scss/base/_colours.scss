@@ -1,0 +1,33 @@
+// color definitions.
+// http://chir.ag/projects/name-that-color
+// e.g., $color__key-lime-pie: #abc123;
+
+// Branding colors.
+// e.g., $color__branding--primary: $color__key-lime-pie;
+
+// Basic colors.
+$color__black: #000;
+$color__white: #fff;
+
+// Color values.
+$color__science-blue: #0066DB;
+$color__picton-blue: #45B1E8;
+$color__black-rock: #0D0332;
+$color__trout: #4a4e5a;
+$color__java: #1FC2C2;
+
+// Brand colors.
+$color__brand: $color__science-blue;
+$color__grey: $color__trout;
+
+// Complementary colors.
+$color__primary-blue: $color__science-blue;
+$color__secondary-blue: $color__black-rock;
+$color__third-blue: $color__picton-blue;
+$color__four-blue: $color__java;
+
+// Shade of grey colors.
+$color__grey--darken: darken($color__grey, 10%);
+$color__grey--lighten: lighten($color__grey, 10%);
+$color__grey--soft: lighten($color__grey, 60%);
+$color__grey--soften: light($color__black, 98%);

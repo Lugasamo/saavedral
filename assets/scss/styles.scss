@@ -1,0 +1,127 @@
+// Base styles
+@import 'base/colours';
+@import 'base/fonts';
+@import 'base/principal';
+@import 'base/mixins';
+@import '~vue-material/src/components/MdLayout/layout';
+@import "~vue-material/src/components/MdAnimation/variables";
+
+html {
+  color: $color__white;
+  border: {
+    color: $color__white;
+    bottom: 0;
+    left: $space--sm;
+    right: $space--sm;
+    style: solid;
+    top: $space--sm;
+  }
+  font-size: 16px;
+
+  body {
+    @include linear-gradient(to top left, $color__picton-blue, $color__science-blue);
+    font-family: $font__type--default;
+
+    $map: (576: 18, 768: 19, 992: 20);
+    font-size: least-squares-fit($map);
+
+    $map: (576: 24, 768: 26, 992: 26);
+    line-height: least-squares-fit($map);
+
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      height: $space--sm;
+      position: fixed;
+      width: 100%;
+      background: $color__white;
+      z-index: 20;
+    }
+    &::after {
+      bottom: 0;
+    }
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  .md-display-4 {
+    $map: (576: 36, 768: 38, 992: 40);
+    font-size: least-squares-fit($map);
+  }
+  .md-display-3 {
+    $map: (576: 34, 768: 36, 992: 38);
+    font-size: least-squares-fit($map);
+  }
+  .md-display-2 {
+    $map: (576: 32, 768: 34, 992: 36);
+    font-size: least-squares-fit($map);
+  }
+  .md-display-1 {
+    $map: (576: 30, 768: 32, 992: 34);
+    font-size: least-squares-fit($map);
+  }
+  .md-headline {
+    $map: (576: 28, 768: 30, 992: 32);
+    font-size: least-squares-fit($map);
+  }
+  .md-title {
+    $map: (576: 26, 768: 28, 992: 30);
+    font-size: least-squares-fit($map);
+  }
+  .md-subheading {
+    $map: (576: 24, 768: 26, 992: 28);
+    font-size: least-squares-fit($map);
+    font-weight: $font__weight--medium;
+  }
+  .md-body-2 {
+    $map: (576: 16, 768: 17, 992: 18);
+    font-size: least-squares-fit($map);
+  }
+  .md-body-1 {
+    $map: (576: 18, 768: 19, 992: 20);
+    font-size: least-squares-fit($map);
+  }
+  .md-caption {
+    $map: (576: 16, 768: 17, 992: 18);
+    font-size: least-squares-fit($map);
+  }
+  .md-button {
+    $map: (576: 16, 768: 17, 992: 18);
+    font-size: least-squares-fit($map);
+  }
+
+  .app {
+    @include linear-gradient(to top left, $color__picton-blue, $color__science-blue);
+  }
+
+  .md-toolbar {
+    .md-icon {
+      color: white;
+    }
+  }
+
+  // Divider
+  .md-divider {
+    width: $space--xl;
+    background: $color__java;
+    margin: $space--lg 0;
+  }
+
+  .md-display-1 {
+    color: $color__secondary-blue;
+    font-weight: $font__weight--medium;
+  }
+
+  h1 {
+    .md-display-1 {
+      margin-bottom: 0;
+    }
+    + .md-body-1 {
+      margin-bottom: $space--lg;
+      display: block;
+    }
+  }
+}

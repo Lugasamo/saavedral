@@ -1,0 +1,16 @@
+// Spacing
+
+$space: 30px;
+$space--xl: $space * 2;
+$space--lg: $space;
+$space--md: $space / 2;
+$space--sm: $space / 3;
+$space--xs: $space / 6;
+
+.space-xl, .space-lg {
+  display: block;
+}
+
+.space-xl {
+  height: $space--xl;
+}
