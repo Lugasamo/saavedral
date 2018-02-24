@@ -1,53 +1,28 @@
 <template>
-  <div class="app">
-    <md-app>
-      hello
-    </md-app>
+  <div class="md-layout md-gutter md-alignment-center">
+    <div id="index" class="md-layout-item md-size-80 md-alignment-centered">
+      <a class="logo" href="#">
+        <img src="~/assets/images/saavedral.svg"/>
+      </a>
+      <h1 class="md-display-1">Luis Saavedra.</h1>
+      <span class="md-body-1">Digital designer & front-end developer.</span>
+      <div class="md-divider"></div>
+      <div>
+        I am a creative digital designer and front-end developer with passion for stylish design and clean
+        implementation of digital products.
+
+        I have been working on web design, digital and graphic design projects for more than 10+ years.
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  @import '~assets/scss/styles';
-
-  .logo {
-    width: 60px;
-    height: auto;
-    margin: $space--sm $space--md;
-  }
-
-  .about,
-  .contact,
-  .portfolio {
-    min-height: 900px;
-    padding: $space--lg 0;
-    width: 100%;
-  }
-
-  .app {
-    .md-app {
-      padding-top: $space--sm;
-    }
-    .md-app-content {
-      padding: 0 $space--md;
-    }
-    .md-toolbar {
-      box-shadow: none;
+  #index {
+    .logo {
+      width: 60px;
+      height: auto;
+      display: grid;
     }
   }
-
-  .social-media {
-    display: inline;
-    .md-avatar-icon {
-      background: $color__secondary-blue;
-      color: $color__white;
-      margin: $space--xs;
-      :visited {
-        color: $color__white;
-      }
-      :first-child {
-        margin-left: 0;
-      }
-    }
-  }
-
 </style>

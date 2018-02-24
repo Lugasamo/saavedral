@@ -1,5 +1,6 @@
 <template>
-  <div class="contact" id="contact">
+  <div class="md-layout md-gutter md-alignment-center">
+    <div class="contact md-layout-item md-size-80 md-alignment-centered" id="contact">
     <h1 class="md-display-1">Contact.</h1>
     <span class="md-body-1">I would love to hear from you.</span>
     <div class="md-divider"></div>
@@ -60,6 +61,7 @@
             me project, please get in touch to discuss.">
         luis@saavedral.com</a>.
       </p>
+    </div>
     </div>
   </div>
 </template>
