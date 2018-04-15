@@ -2,29 +2,40 @@
     <md-list>
         <md-list-item>
             <nuxt-link class="navbar-item" to="/">
-                <img src="~/assets/images/saavedral.svg"/>
+                <div class="brand">
+                    <img class="logo" src="~/assets/images/ls.svg"/>
+                </div>
                 <div class="md-divider"></div>
             </nuxt-link>
         </md-list-item>
 
         <md-list-item>
             <nuxt-link class="navbar-item" to="/about">
-                <h1 class="md-subheading">About me.</h1>
-                <div class="md-body-1">A bit of me.</div>
+                <md-icon class="md-size-2x">face</md-icon>
+                <div>
+                    <h1 class="md-subheading">About me.</h1>
+                    <div class="md-body-2">A bit of me.</div>
+                </div>
             </nuxt-link>
         </md-list-item>
 
         <md-list-item>
             <nuxt-link class="navbar-item" to="/projects">
-                <h1 class="md-subheading">Portfolio.</h1>
-                <div class="md-body-1">My work in the industry.</div>
+                <md-icon class="md-size-2x" >photo</md-icon>
+                <div>
+                    <h1 class="md-subheading">Portfolio.</h1>
+                    <div class="md-body-2">My work in the industry.</div>
+                </div>
             </nuxt-link>
         </md-list-item>
 
         <md-list-item>
             <nuxt-link class="navbar-item" to="/contact">
-                <h1 class="md-subheading">Contact.</h1>
-                <div class="md-body-1"> I would love to hear from you.</div>
+                <md-icon class="md-size-2x">message</md-icon>
+                <div>
+                    <h1 class="md-subheading">Contact.</h1>
+                    <div class="md-body-2"> I would love to hear from you.</div>
+                </div>
             </nuxt-link>
         </md-list-item>
 
@@ -54,13 +65,36 @@
 
 <style lang="scss" scoped>
     @import '~assets/scss/styles.scss';
+    .logo {
+        width: auto;
+        display: grid;
+        @include md-layout-medium-and-up {
+            width: auto;
+            height: 80px;
+            display: grid;
+            img {
+                height: 80px;
+            }
+        }
+    }
+
     .md-list {
         .md-subheading {
             margin-bottom: $space--sm;
+            display: none;
+
+            @include md-layout-medium-and-up {
+                display: block;
+            }
         }
-        .md-body-1 {
+        .md-body-2 {
             color: $color__third-blue;
             font-weight: $font__weight--medium;
+            display: none;
+
+            @include md-layout-medium-and-up {
+                display: block;
+            }
         }
         a {
             text-decoration: none;
@@ -81,6 +115,28 @@
             :first-child {
                 margin-left: 0;
             }
+        }
+    }
+    .navbar-item {
+        display: table;
+        .brand {
+            width: 100%;
+            display: block;
+        }
+        a, div {
+            display: table-cell;
+        }
+        div {
+            padding: 0;
+            @include md-layout-medium-and-up {
+                padding: 0 $space--md;
+                div {
+                    padding: 0;
+                }
+            }
+        }
+        .md-divider {
+            display: block;
         }
     }
 </style>

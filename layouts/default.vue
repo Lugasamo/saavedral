@@ -74,13 +74,25 @@
         }
     }
     .md-drawer {
-        @include md-layout-medium-and-up {
-            width: 400px;
-        }
         background: $color__white;
         color: $color__secondary-blue;
         overflow: hidden;
-        position: fixed;
-        width: 100%;
+        position: absolute;
+        width: 96px;
+        @include md-layout-medium-and-up {
+            width: 400px;
+        }
+    }
+    .md-drawer {
+        .md-toolbar {
+            flex-flow: column;
+            @include md-layout-medium-and-up {
+                flex-flow: row wrap;
+            }
+            span {
+                $map: (576: 16, 768: 17, 992: 16);
+                font-size: least-squares-fit($map);
+            }
+        }
     }
 </style>

@@ -1,12 +1,12 @@
 <template>
     <div class="md-layout md-gutter md-alignment-center">
-        <div class="md-layout-item md-size-80 md-alignment-centered" id="about">
+        <div class="md-layout-item md-xsmall-size-100 md-size-80 md-alignment-centered" id="projects">
             <div class="portfolio" id="portfolio">
                 <h1 class="md-display-1">Portfolio.</h1>
                 <span class="md-body-1">My work in the industry</span>
                 <div class="md-divider"></div>
 
-                <div class="md-layout md-gutter">
+                <div class="md-layout md-gutter md-size-100">
                     <a class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">one</a>
                     <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">two</div>
                     <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">three</div>
