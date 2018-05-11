@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <md-app md-mode="reveal">
+    <md-app md-mode="reveal">
             <md-app-toolbar class="md-primary">
                 <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
                     <md-icon>menu</md-icon>
@@ -17,15 +16,12 @@
                         </md-button>
                     </div>
                 </md-toolbar>
-
                 <navbar></navbar>
-
             </md-app-drawer>
             <md-app-content>
                 <nuxt/>
             </md-app-content>
         </md-app>
-    </div>
 </template>
 
 <script>
@@ -62,23 +58,28 @@
     }
     .md-app {
         height: -webkit-fill-available;
-        padding-top: $space--sm;
+        scroll-padding: 30px;
     }
     .md-app-content {
         padding: 0 $space--md;
     }
     .md-toolbar {
         box-shadow: none;
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
         .md-button {
-            background: $color__science-blue;
+            background: $color__tuatara;
         }
     }
     .md-drawer {
-        background: $color__white;
-        color: $color__secondary-blue;
+        background: $color__tuatara;
+        color: $color__white;
         overflow: hidden;
-        position: absolute;
-        width: 96px;
+        position: fixed;
+        height: 100% ;
+        top:15px;
+        width: 90px;
         @include md-layout-medium-and-up {
             width: 400px;
         }
@@ -94,5 +95,9 @@
                 font-size: least-squares-fit($map);
             }
         }
+    }
+    .md-app-content {
+       padding: 0;
+        margin: 0 20px;
     }
 </style>

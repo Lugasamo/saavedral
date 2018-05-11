@@ -7,19 +7,31 @@
 @import "~vue-material/src/components/MdAnimation/variables";
 
 html {
-  color: $color__white;
-  border: {
-    color: $color__white;
-    bottom: 0;
-    left: $space--sm;
-    right: $space--sm;
-    style: solid;
-    top: $space--sm;
-  }
+  color: $color__tuatara;
   font-size: 16px;
-
+  height: auto !important;
+  border: {
+    color: $color_-trout;
+    bottom: 0;
+    left: $space--md;
+    right: $space--md;
+    style: solid;
+    top: $space--md;
+  }
+  .md-scrollbar::-webkit-scrollbar {
+    display: none !important;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+  .md-app-container {
+    overflow-x: hidden;
+  }
   body {
-    @include linear-gradient(to top left, $color__picton-blue, $color__science-blue);
+    overflow-y: scroll; /* has to be scroll, not auto */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    @include linear-gradient(to top left, #fbf4ee, $color__white );
     font-family: $font__type--default;
 
     $map: (576: 18, 768: 19, 992: 20);
@@ -27,15 +39,22 @@ html {
 
     $map: (576: 24, 768: 26, 992: 26);
     line-height: least-squares-fit($map);
+  }
+  .md-app-container {
+    padding: 0;
+    margin: 0;
+    $map: (576: 16, 768: 17, 992: 18);
+    font-size: least-squares-fit($map);
+  }
 
     &::after,
     &::before {
       content: '';
       display: block;
-      height: $space--sm;
+      height: $space--md;
       position: fixed;
       width: 100%;
-      background: $color__white;
+      background: $color__tuatara;
       z-index: 20;
     }
     &::after {
@@ -45,13 +64,6 @@ html {
     &::before {
       top: 0;
     }
-  }
-
-  .md-app-scroller {
-    $map: (576: 16, 768: 17, 992: 18);
-    font-size: least-squares-fit($map);
-  }
-
   .md-display-4 {
     $map: (576: 36, 768: 38, 992: 40);
     font-size: least-squares-fit($map);
@@ -103,6 +115,7 @@ html {
   }
 
   .md-toolbar {
+    padding: $space--lg !important;
     span {
       display: none;
       @include md-layout-medium-and-up {
@@ -122,7 +135,7 @@ html {
   }
 
   .md-display-1 {
-    color: $color__secondary-blue;
+    color: $color__tuatara;
     font-weight: $font__weight--medium;
   }
 
@@ -145,6 +158,26 @@ html {
     + .md-body-3 {
       margin-bottom: $space--lg;
       display: block;
+    }
+  }
+  .md-button {
+    background: $color__black;
+    text-decoration: none;
+    color: $color__white;
+  }
+  .blue-stripe {
+    margin-top: $space--xl;
+    padding: $space--xl 0;
+    background: $color__blue--alpha;
+    display: block;
+    width: 100%;
+  }
+  .screens {
+    text-align: center;
+    padding: $space--lg;
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }

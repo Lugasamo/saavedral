@@ -3,7 +3,7 @@
         <md-list-item>
             <nuxt-link class="navbar-item" to="/">
                 <div class="brand">
-                    <img class="logo" src="~/assets/images/ls.svg"/>
+                    <img class="logo" src="http://saavedral.me/saavedral/images/ls-lines.svg"/>
                 </div>
                 <div class="md-divider"></div>
             </nuxt-link>
@@ -11,17 +11,17 @@
 
         <md-list-item>
             <nuxt-link class="navbar-item" to="/about">
-                <md-icon class="md-size-2x">face</md-icon>
+                <md-icon class="md-size-1x">face</md-icon>
                 <div>
                     <h1 class="md-subheading">About me.</h1>
-                    <div class="md-body-2">A bit of me.</div>
+                    <div class="md-body-2">My formation as a designer.</div>
                 </div>
             </nuxt-link>
         </md-list-item>
 
         <md-list-item>
             <nuxt-link class="navbar-item" to="/projects">
-                <md-icon class="md-size-2x" >photo</md-icon>
+                <md-icon class="md-size-1x" >photo</md-icon>
                 <div>
                     <h1 class="md-subheading">Portfolio.</h1>
                     <div class="md-body-2">My work in the industry.</div>
@@ -31,7 +31,7 @@
 
         <md-list-item>
             <nuxt-link class="navbar-item" to="/contact">
-                <md-icon class="md-size-2x">message</md-icon>
+                <md-icon class="md-size-1x">message</md-icon>
                 <div>
                     <h1 class="md-subheading">Contact.</h1>
                     <div class="md-body-2"> I would love to hear from you.</div>
@@ -88,7 +88,7 @@
             }
         }
         .md-body-2 {
-            color: $color__third-blue;
+            color: $color__linen;
             font-weight: $font__weight--medium;
             display: none;
 
@@ -96,17 +96,30 @@
                 display: block;
             }
         }
+        .md-icon {
+            font-size: 30px !important;
+            padding: 0 25px;
+        }
         a {
             text-decoration: none;
+            &:link { /* Essentially means a[href], or that the link actually goes somewhere */
+                color: $color__white;
+            }
             &:visited {
-                color: inherit;
+                color: $color__white;
+            }
+            &:hover {
+                color: $color__white;
+            }
+            &:active {
+                color: $color__white;
             }
         }
     }
     .social-media {
         display: inline;
         .md-avatar-icon {
-            background: $color__secondary-blue;
+            background: $color__black;
             color: $color__white;
             margin: $space--xs;
             :visited {

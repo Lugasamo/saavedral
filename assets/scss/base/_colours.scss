@@ -13,8 +13,10 @@ $color__white: #fff;
 $color__science-blue: #0066DB;
 $color__picton-blue: #45B1E8;
 $color__black-rock: #0D0332;
+$color__tuatara: #363534;
 $color__trout: #4a4e5a;
 $color__java: #1FC2C2;
+$color__linen: #FAF0E6;
 
 // Brand colors.
 $color__brand: $color__science-blue;
@@ -31,3 +33,6 @@ $color__grey--darken: darken($color__grey, 10%);
 $color__grey--lighten: lighten($color__grey, 10%);
 $color__grey--soft: lighten($color__grey, 60%);
 $color__grey--soften: light($color__black, 98%);
+
+// Light blue
+$color__blue--alpha: rgba($color__black-rock, .2);
