@@ -2,9 +2,7 @@
 
   <div class="md-layout md-gutter md-alignment-center">
     <div class="md-layout-item md-small-size-80 md-xsmall-size-100 md-size-60 md-alignment-centered">
-      <a class="logo" href="#">
-        <img src="http://saavedral.me/saavedral/images/ls.svg"/>
-      </a>
+      <div class="space-xl"></div>
       <div class="space-xl"></div>
     </div>
     <!--Porfolio-->
@@ -183,115 +181,114 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '../assets/scss/styles.scss';
+@import "../assets/scss/styles.scss";
 
-  .logo {
-    width: 120px;
+.logo {
+  width: 120px;
+  height: 120px;
+  display: grid;
+  img {
     height: 120px;
-    display: grid;
+  }
+}
+.mobile {
+  width: 300px;
+  height: 605px;
+  position: relative;
+  display: grid;
+  text-align: center;
+  padding: $space--lg 0;
+  background: url("http://saavedral.me/saavedral/images/iphone.png");
+  background-size: cover;
+  margin-top: $space--xl;
+  @include md-layout-medium-and-up {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+  }
+  img {
+    position: absolute;
+    top: 70px;
+    left: 18px;
+    width: 264px;
+    height: auto;
+  }
+}
+.macbook {
+  width: 370px;
+  height: 200px;
+  position: relative;
+  display: grid;
+  background: url("http://saavedral.me/saavedral/images/macbook.png");
+  background-size: cover;
+  margin: 0 auto;
+  img {
+    position: absolute;
+    top: 14px;
+    left: 34px;
+    width: 302px;
+    height: auto;
+  }
+  @include md-layout-medium-and-up {
+    width: 846px;
+    height: 469px;
     img {
-      height: 120px;
+      top: 30px;
+      left: 83px;
+      width: 682px;
     }
   }
-  .mobile {
-    width: 300px;
-    height: 605px;
+}
+.circle {
+  display: none;
+  @include md-layout-medium-and-up {
+    height: 500px;
+    width: 500px;
+    display: block;
     position: relative;
-    display: grid;
-    text-align: center;
-    padding: $space--lg 0;
-    background: url("http://saavedral.me/saavedral/images/iphone.png");
-    background-size: cover;
-    margin-top: $space--xl;
-    @include md-layout-medium-and-up {
-      position: relative;
-      top: 0;
-      margin-top: 0;
-    }
-    img {
-      position: absolute;
-      top:70px;
-      left:18px;
-      width: 264px;
-      height: auto;
+    border-radius: 50%;
+    background: $color__blue--alpha;
+    top: -200px;
+    right: 100px;
+    z-index: -1;
+  }
+}
+.block {
+  background: $color__white;
+  color: $color__secondary-blue;
+  position: relative;
+  @include md-layout-medium-and-up {
+    padding: {
+      top: $space--xl;
+      bottom: $space--xl;
+      left: $space--xl;
+      right: $space--xl;
     }
   }
-  .macbook {
-    width: 370px;
-    height: 200px;
-    position: relative;
-    display: grid;
-    background: url("http://saavedral.me/saavedral/images/macbook.png");
-    background-size: cover;
-    margin: 0 auto;
-    img {
-      position: absolute;
-      top: 14px;
-      left: 34px;
-      width: 302px;
-      height: auto;
+}
+.block-mobile {
+  position: relative;
+  left: 0;
+  @include md-layout-medium-and-up {
+    padding: {
+      top: $space--xl;
+      bottom: $space--xl;
+      left: $space--xl;
+      right: $space--xl;
     }
-    @include md-layout-medium-and-up {
-      width: 846px;
-      height: 469px;
-      img {
-        top:30px;
-        left: 83px;
-        width: 682px;
-      }
-    }
+    left: 150px;
   }
-  .circle {
-    display: none;
-    @include md-layout-medium-and-up {
-      height: 500px;
-      width: 500px;
-      display: block;
-      position: relative;
-      border-radius: 50%;
-      background: $color__blue--alpha;
-      top: -200px;
-      right: 100px;
-      z-index: -1;
-    }
+}
+.p-mobile {
+  padding: 0;
+  @include md-layout-medium-and-up {
+    display: block;
+    padding-right: 222px;
   }
-  .block {
-    background: $color__white;
-    color: $color__secondary-blue;
-    position: relative;
-    @include md-layout-medium-and-up {
-      padding: {
-        top: $space--xl;
-        bottom: $space--xl;
-        left: $space--xl;
-        right: $space--xl;
-      }
-    }
-  }
-  .block-mobile {
-    position: relative;
-    left: 0;
-    @include md-layout-medium-and-up {
-      padding: {
-        top: $space--xl;
-        bottom: $space--xl;
-        left: $space--xl;
-        right: $space--xl;
-      }
-      left: 150px;
-    }
-  }
-  .p-mobile {
-    padding: 0;
-      @include md-layout-medium-and-up {
-        display: block;
-        padding-right: 222px;
-      }
-    }
-  .btn {
-    background: $color__black-rock;
-    color: $color__white;
-    margin: 0;
-  }
-
+}
+.btn {
+  background: $color__black-rock;
+  color: $color__white;
+  margin: 0;
+}
 </style>

@@ -13,8 +13,7 @@
             <nuxt-link class="navbar-item" to="/about">
                 <md-icon class="md-size-1x">face</md-icon>
                 <div>
-                    <h1 class="md-subheading">About me.</h1>
-                    <div class="md-body-2">My formation as a designer.</div>
+                    <h1>About me.</h1>
                 </div>
             </nuxt-link>
         </md-list-item>
@@ -23,8 +22,7 @@
             <nuxt-link class="navbar-item" to="/projects">
                 <md-icon class="md-size-1x" >photo</md-icon>
                 <div>
-                    <h1 class="md-subheading">Portfolio.</h1>
-                    <div class="md-body-2">My work in the industry.</div>
+                    <h1>Portfolio.</h1>
                 </div>
             </nuxt-link>
         </md-list-item>
@@ -33,8 +31,7 @@
             <nuxt-link class="navbar-item" to="/contact">
                 <md-icon class="md-size-1x">message</md-icon>
                 <div>
-                    <h1 class="md-subheading">Contact.</h1>
-                    <div class="md-body-2"> I would love to hear from you.</div>
+                    <h1>Contact.</h1>
                 </div>
             </nuxt-link>
         </md-list-item>
@@ -79,15 +76,7 @@
     }
 
     .md-list {
-        .md-subheading {
-            margin-bottom: $space--sm;
-            display: none;
-
-            @include md-layout-medium-and-up {
-                display: block;
-            }
-        }
-        .md-body-2 {
+        h1 {
             color: $color__linen;
             font-weight: $font__weight--medium;
             display: none;

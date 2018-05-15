@@ -110,7 +110,7 @@
     .md-field {
         .md-input,
         .md-textarea {
-            border-bottom: 1px solid $color__java;
+            border-bottom: 1px solid $color__black-rock;
         }
     }
 

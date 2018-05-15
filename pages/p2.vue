@@ -2,9 +2,7 @@
 
   <div class="md-layout md-gutter md-alignment-center">
     <div class="md-layout-item md-small-size-80 md-xsmall-size-100 md-size-60 md-alignment-centered">
-      <a class="logo" href="#">
-        <img src="http://saavedral.me/saavedral/images/ls.svg"/>
-      </a>
+      <div class="space-xl"></div>
       <div class="space-xl"></div>
     </div>
     <!--Porfolio-->
