@@ -3,40 +3,37 @@
 @import 'base/fonts';
 @import 'base/principal';
 @import 'base/mixins';
+@import 'base/typography';
 @import '~vue-material/src/components/MdLayout/layout';
 @import "~vue-material/src/components/MdAnimation/variables";
-
 html {
+  border: {
   color: $color__tuatara;
   font-size: 16px;
   height: auto !important;
-  border: {
-    color: $color_-trout;
     bottom: 0;
+    color: $color_-trout;
     left: $space--md;
     right: $space--md;
     style: solid;
     top: $space--md;
   }
   .md-scrollbar::-webkit-scrollbar {
-    display: none !important;
-    overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
+    /* has to be scroll, not auto */
+    display: none !important;
     overflow-x: hidden;
-  }
-  .md-app-container {
-    overflow-x: hidden;
+    overflow-y: scroll;
   }
   body {
-    overflow-y: scroll; /* has to be scroll, not auto */
+    overflow-y: scroll;
+    /* has to be scroll, not auto */
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    @include linear-gradient(to top left, #fbf4ee, $color__white );
+    @include linear-gradient(to top left, #fbf4ee, $color__white);
     font-family: $font__type--default;
-
     $map: (576: 18, 768: 19, 992: 20);
     font-size: least-squares-fit($map);
-
     $map: (576: 24, 768: 26, 992: 26);
     line-height: least-squares-fit($map);
   }
@@ -45,75 +42,31 @@ html {
     margin: 0;
     $map: (576: 16, 768: 17, 992: 18);
     font-size: least-squares-fit($map);
+    overflow-x: hidden;
   }
-
-    &::after,
-    &::before {
-      content: '';
-      display: block;
-      height: $space--md;
-      position: fixed;
-      width: 100%;
-      background: $color__tuatara;
-      z-index: 20;
-    }
-    &::after {
-      bottom: 0;
-    }
-
-    &::before {
-      top: 0;
-    }
-  .md-display-4 {
-    $map: (576: 36, 768: 38, 992: 40);
-    font-size: least-squares-fit($map);
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    height: $space--md;
+    position: fixed;
+    width: 100%;
+    background: $color__tuatara;
+    z-index: 20;
   }
-  .md-display-3 {
-    $map: (576: 34, 768: 36, 992: 38);
-    font-size: least-squares-fit($map);
+  &::after {
+    bottom: 0;
   }
-  .md-display-2 {
-    $map: (576: 32, 768: 34, 992: 36);
-    font-size: least-squares-fit($map);
-  }
-  .md-display-1 {
-    $map: (576: 30, 768: 32, 992: 34);
-    font-size: least-squares-fit($map);
-  }
-  .md-headline {
-    $map: (576: 28, 768: 30, 992: 32);
-    font-size: least-squares-fit($map);
-  }
-  .md-title {
-    $map: (576: 26, 768: 28, 992: 30);
-    font-size: least-squares-fit($map);
-  }
-  .md-subheading {
-    $map: (576: 24, 768: 26, 992: 28);
-    font-size: least-squares-fit($map);
-    font-weight: $font__weight--medium;
-  }
-  .md-body-2 {
-    $map: (576: 16, 768: 17, 992: 18);
-    font-size: least-squares-fit($map);
-  }
-  .md-body-1 {
-    $map: (576: 18, 768: 19, 992: 20);
-    font-size: least-squares-fit($map);
-  }
-  .md-caption {
-    $map: (576: 16, 768: 17, 992: 18);
-    font-size: least-squares-fit($map);
+  &::before {
+    top: 0;
   }
   .md-button {
     $map: (576: 16, 768: 17, 992: 18);
     font-size: least-squares-fit($map);
   }
-
   .app {
     @include linear-gradient(to top left, $color__picton-blue, $color__science-blue);
   }
-
   .md-toolbar {
     padding: $space--lg !important;
     span {
@@ -126,36 +79,48 @@ html {
       color: white;
     }
   }
-
-  // Divider
+  .logo {
+    width: auto;
+    height: 80px;
+    display: grid;
+    img {
+      height: 80px;
+    }
+  } // Divider
   .md-divider {
     width: $space--xl;
     background: $color__java;
     margin: $space--lg 0;
   }
-
+  .t-center {
+    text-align: left;
+    margin: 0;
+    margin-bottom: $space--xs;
+    @include md-layout-medium-and-up {
+      text-align: center;
+      margin: auto;
+      margin-bottom: $space--lg;
+    }
+  }
   .md-display-1 {
     color: $color__tuatara;
     font-weight: $font__weight--medium;
   }
-
   h1 {
     .md-display-1 {
       margin-bottom: 0;
     }
-    + .md-body-1 {
+    +.md-body-1 {
       margin-bottom: $space--lg;
       display: block;
     }
   }
-  h2 {
-
-  }
+  h2 {}
   h3 {
     .md-display-3 {
       margin-bottom: 0;
     }
-    + .md-body-3 {
+    +.md-body-3 {
       margin-bottom: $space--lg;
       display: block;
     }
@@ -165,19 +130,182 @@ html {
     text-decoration: none;
     color: $color__white;
   }
-  .blue-stripe {
+  .black-stripe {
     margin-top: $space--xl;
     padding: $space--xl 0;
-    background: $color__blue--alpha;
+    background: $color__grey;
     display: block;
-    width: 100%;
+    width: 110%;
+    margin-right: -20px;
+    margin-left: -20px;
+    color: $color__white;
   }
-  .screens {
+  .circle {
+    display: none;
+
+    @include md-layout-medium-and-up {
+      background: $color__shadow-green;
+      border-radius: 50%;
+      display: block;
+      height: 500px;
+      position: relative;
+      right: 100px;
+      top: -100px;
+      width: 500px;
+      z-index: -1;
+    }
+  }
+/*   .shape {
+    position: relative;
+    &::before {
+      display: none;
+      content: "";
+
+      @include md-layout-medium-and-up {
+        background: $color__shadow-green;
+        border-radius: 13em;
+        display: block;
+        height: 600px;
+        position: absolute;
+        right: 15%;
+        bottom: -15%;
+        width: 200px;
+        z-index: -1;
+      }
+    }
+  } */
+  .screens,
+  .screens-md {
     text-align: center;
     padding: $space--lg;
+    text-align: center;
+    $map: (576: 16, 768: 17, 992: 18);
+    font-size: least-squares-fit($map);
+    line-height: auto;
+    text-transform: uppercase;
     img {
       max-width: 100%;
       height: auto;
+      padding: $space--md 0;
+    }
+  }
+
+  .mobile {
+    width: 300px;
+    height: 605px;
+    position: relative;
+    display: grid;
+    text-align: center;
+    padding: $space--lg 0;
+    background: url("http://saavedral.me/saavedral/images/iphone.png");
+    background-size: cover;
+    margin-top: $space--xl;
+    @include md-layout-medium-and-up {
+      position: relative;
+      top: 0;
+      margin-top: 0;
+    }
+    img {
+      position: absolute;
+      top:70px;
+      left:18px;
+      width: 264px;
+      height: auto;
+    }
+  }
+  .macbook {
+    width: 370px;
+    height: 200px;
+    position: relative;
+    display: grid;
+    background: url("http://saavedral.me/saavedral/images/macbook.png");
+    background-size: cover;
+    margin: 0 auto;
+    img {
+      position: absolute;
+      top: 14px;
+      left: 34px;
+      width: 302px;
+      height: auto;
+    }
+
+    @include md-layout-medium-and-up {
+      width: 846px;
+      height: 469px;
+      img {
+        top:30px;
+        left: 83px;
+        width: 682px;
+      }
+    }
+  }
+}
+
+.block {
+  background: $color__white;
+  color: $color__secondary-blue;
+  position: relative;
+  @include md-layout-medium-and-up {
+    padding: {
+      bottom: $space--xl;
+      left: $space--xl;
+      right: $space--xl;
+      top: $space--xl;
+    }
+  }
+}
+.block-mobile {
+  position: relative;
+  left: 0;
+  @include md-layout-medium-and-up {
+    padding: {
+      top: $space--xl;
+      bottom: $space--xl;
+      left: $space--xl;
+      right: $space--xl;
+    }
+    left: 150px;
+  }
+}
+.p-mobile {
+  padding: 0;
+    @include md-layout-medium-and-up {
+      padding-right: 250px;
+    }
+  }
+
+.btn {
+  background: $color__black-rock;
+  color: $color__white;
+  margin: 0;
+}
+.md-dialog-container {
+  background: white;
+  overflow-y: scroll;
+}
+
+//Steppers
+.md-steppers {
+  color: $color__white;
+  a {
+    color: $color__java;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &.md-vertical {
+    background: $color__tuatara;
+    .md-stepper {
+      &:after {
+        background: $color__white;
+      }
+    }
+    .md-stepper-number {
+      border: 1px solid $color__white;
+    }
+    .md-button-content {
+      svg {
+        fill: $color__white;
+      }
     }
   }
 }

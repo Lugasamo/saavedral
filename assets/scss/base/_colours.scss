@@ -10,29 +10,30 @@ $color__black: #000;
 $color__white: #fff;
 
 // Color values.
-$color__science-blue: #0066DB;
-$color__picton-blue: #45B1E8;
 $color__black-rock: #0D0332;
-$color__tuatara: #363534;
-$color__trout: #4a4e5a;
 $color__java: #1FC2C2;
 $color__linen: #FAF0E6;
+$color__picton-blue: #45B1E8;
+$color__science-blue: #0066DB;
+$color__shadow-green: #98BEC0;
+$color__trout: #4a4e5a;
+$color__tuatara: #363534;
 
 // Brand colors.
 $color__brand: $color__science-blue;
-$color__grey: $color__trout;
+$color__grey: $color__tuatara;
 
 // Complementary colors.
+$color__four-blue: $color__java;
 $color__primary-blue: $color__science-blue;
 $color__secondary-blue: $color__black-rock;
 $color__third-blue: $color__picton-blue;
-$color__four-blue: $color__java;
 
 // Shade of grey colors.
+
 $color__grey--darken: darken($color__grey, 10%);
 $color__grey--lighten: lighten($color__grey, 10%);
 $color__grey--soft: lighten($color__grey, 60%);
 $color__grey--soften: light($color__black, 98%);
-
 // Light blue
 $color__blue--alpha: rgba($color__black-rock, .2);

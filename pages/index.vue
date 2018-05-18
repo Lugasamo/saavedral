@@ -1,28 +1,15 @@
 <template>
 
-    <!--challenge-->
-    <div>
-      <div class="md-layout md-gutter md-alignment-center">
-    <div class="md-layout-item md-size-100 md-alignment-centered">
-      <div class="space-xl"></div>
-      <div class="space-xl"></div>
-      <div class="space-xl"></div>
-      <div class="space-xl"></div>
+<!--challenge-->
+<div class="bg-image">
+  <div class="md-layout md-gutter md-alignment-center">
+    <div class="md-layout-item md-small-size-40 md-xsmall-size-100 md-size-40 t-center">
+      <h1 class="md-display-1 t-center">Luis G Saavedra.</h1>
+      <span class="md-body-1 t-center">UX UI Designer, Digital Designer & Frontend Designer</span>
+      <md-button class="md-dense md-primary t-center" to="/portfolio">view Porfolio</md-button>
     </div>
-
-        <div class="md-layout-item md-small-size-20 md-xsmall-size-100 md-size-20 md-alignment-centered screens">
-         <a class="logo" href="#">
-          <img src="http://saavedral.me/saavedral/images/ls.svg"/>
-        </a>
-        </div>
-      
-        <div class="md-layout-item md-small-size-40 md-xsmall-size-100 md-size-40 md-alignment-centered">
-        <h1 class="md-display-1">Luis G Saavedra.</h1>
-      <span class="md-body-1">UX UI Designer, Digital Designer & Frontend Designer</span>
-      <md-button class="md-dense md-primary" to="/projects">view Porfolio</md-button>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
 
 </template>
 
@@ -47,5 +34,15 @@
   color: $color__white;
   margin: auto;
   padding: 0 $space--md;
+}
+.bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("http://saavedral.me/saavedral/images/welcome.png") no-repeat center center;
+  background-size:50vw;
+  @include md-layout-medium-and-up {
+    background-size: 20vw;
+  }
 }
 </style>

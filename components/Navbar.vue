@@ -19,7 +19,7 @@
         </md-list-item>
 
         <md-list-item>
-            <nuxt-link class="navbar-item" to="/projects">
+            <nuxt-link class="navbar-item" to="/portfolio">
                 <md-icon class="md-size-1x" >photo</md-icon>
                 <div>
                     <h1>Portfolio.</h1>
@@ -88,6 +88,7 @@
         .md-icon {
             font-size: 30px !important;
             padding: 0 25px;
+            margin-top: -$space--sm;
         }
         a {
             text-decoration: none;
@@ -131,7 +132,7 @@
         div {
             padding: 0;
             @include md-layout-medium-and-up {
-                padding: 0 $space--md;
+                padding: 0 $space--xs;
                 div {
                     padding: 0;
                 }
@@ -139,6 +140,12 @@
         }
         .md-divider {
             display: block;
+        }
+    }
+    .md-list-item {
+        h1 {
+            padding: 0;
+            margin: 0;
         }
     }
 </style>

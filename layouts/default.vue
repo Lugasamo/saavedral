@@ -65,11 +65,15 @@
     }
     .md-toolbar {
         box-shadow: none;
-        overflow-y: scroll; /* has to be scroll, not auto */
+        overflow-y: hidden; /* has to be scroll, not auto */
         -webkit-overflow-scrolling: touch;
         overflow-x: hidden;
         .md-button {
             background: $color__tuatara;
+            border: 1px solid $color--white;
+            .md-icon {
+                margin-top: -2px;
+            }
         }
     }
     .md-drawer {
@@ -81,7 +85,7 @@
         top:15px;
         width: 90px;
         @include md-layout-medium-and-up {
-            width: 400px;
+            width: 260px;
         }
     }
     .md-drawer {

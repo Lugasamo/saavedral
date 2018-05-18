@@ -7,33 +7,19 @@
         <div class="md-divider"></div>
         </div>
     <div>
-      <div class="md-layout md-gutter md-alignment-center">
-        <div class="md-layout-item md-small-size-50 md-xsmall-size-100 md-size-50 md-alignment-centered screens">
-          <img src="http://saavedral.me/saavedral/images/luis.png"/>
-        </div>
-        <div class="md-layout-item md-small-size-50 md-xsmall-size-100 md-size-50 md-alignment-centered">
-
+      <div class="md-layout md-gutter md-alignment-top-center">
+        <div class="md-layout-item md-size-50 md-small-size-50 md-xsmall-size-100  md-alignment-centered">
         <div>
           My name is Luis G Saavedra and I am a Melbourne-based User Experience designer, Digital Designer and Front-end Designer.  I have a huge passion for stylish design, clean implementation and product focus, with the user experience at the core of everything I do.<br><br>
           I bring diversity of thought and in depth knowledge to the teams I work with, and as an Industrial Designer, I always consider age, cultural identity and environment as part of my solution.<br><br>
           I use simplicity and practicality to express my ideas. From sketching, wire-framing and development of prototypes to final products, I work with passion and desire. I am always keen to learn new processes and ways of working, and help other to make project real and useful for humans.
         </div>
         </div>
+        <div class="md-layout-item md-size-50 md-small-size-50 md-xsmall-size-100  md-alignment-top-center">
+          <img src="http://saavedral.me/saavedral/images/luis.png"/>
+        </div>
       </div>
     </div>
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.about {
-  .logo {
-    width: auto;
-    height: 120px;
-    display: grid;
-    img {
-      height: 120px;
-    }
-  }
-}
-</style>

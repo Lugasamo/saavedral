@@ -1,6 +1,6 @@
 <template>
     <div class="md-layout md-gutter md-alignment-center">
-        <div class="contact md-layout-item md-size-60 md-small-size-100 md-alignment-centered" id="contact">
+        <div class="contact md-layout-item md-size-80 md-small-size-100 md-alignment-centered" id="contact">
             <h1 class="md-display-1">Contact.</h1>
             <span class="md-body-1">I would love to hear from you.</span>
             <div class="md-divider"></div>

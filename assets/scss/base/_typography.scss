@@ -1,0 +1,40 @@
+.md-display-4 {
+  $map: (576: 36, 768: 38, 992: 40);
+  font-size: least-squares-fit($map);
+}
+.md-display-3 {
+  $map: (576: 34, 768: 36, 992: 38);
+  font-size: least-squares-fit($map);
+}
+.md-display-2 {
+  $map: (576: 32, 768: 34, 992: 36);
+  font-size: least-squares-fit($map);
+}
+.md-display-1 {
+  $map: (576: 30, 768: 32, 992: 34);
+  font-size: least-squares-fit($map);
+}
+.md-headline {
+  $map: (576: 28, 768: 30, 992: 32);
+  font-size: least-squares-fit($map);
+}
+.md-title {
+  $map: (576: 26, 768: 28, 992: 30);
+  font-size: least-squares-fit($map);
+}
+.md-subheading {
+  $map: (576: 24, 768: 26, 992: 28);
+  font-size: least-squares-fit($map);
+  font-weight: $font__weight--medium;
+  line-height: auto;
+}
+.md-body-1 {
+  $map: (576: 17, 768: 18, 992: 20);
+  font-size: least-squares-fit($map);
+  line-height: auto;
+}
+.md-body-2 {
+  $map: (576: 16, 768: 17, 992: 18);
+  font-size: least-squares-fit($map);
+  line-height: auto;
+}
