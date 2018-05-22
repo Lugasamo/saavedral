@@ -6,10 +6,12 @@
                 <span class="md-body-1">My work in the industry</span>
                 <div class="md-divider"></div>
                 <div class="md-layout md-gutter md-alignment-center">
-                    <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 ikea" to="/ikea"></nuxt-link >
+
                     <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 rl" to="/realityloop"></nuxt-link >
                     <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 plai" to="/2plai"></nuxt-link >
                     <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 sushi" to="/sushi"></nuxt-link >
+                    <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 ikea" to="/ikea"></nuxt-link >
+                    <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 vollie" to="/vollie"></nuxt-link >
                     <!--<nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 bizally" to="/p1"></nuxt-link >-->
                     <!--<nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 redgum" to="/p1"></nuxt-link >-->
                     <nuxt-link  class="md-layout-item md-medium-size-33 md-small-size-25 md-xsmall-size-100 lookatme" to="/lookatme"></nuxt-link >
@@ -103,6 +105,12 @@
         .lookatme {
             &::after {
                 background: url("http://saavedral.me/saavedral/images/lookatme-portfolio.png");
+                @include background-ims ();
+            }
+        }
+        .vollie {
+            &::after {
+                background: url("http://saavedral.me/saavedral/images/vollie-portfolio.png");
                 @include background-ims ();
             }
         }

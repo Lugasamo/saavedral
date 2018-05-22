@@ -48,10 +48,6 @@
                 </md-avatar>
 
                 <md-avatar class="md-avatar-icon">
-                    <a href="https://gitlab.com/Saavedral" target="_blank"><i class="fa fa-gitlab"></i></a>
-                </md-avatar>
-
-                <md-avatar class="md-avatar-icon">
                     <a href="https://www.drupal.org/u/lugasamo" target="_blank"><i class="fa fa-drupal"></i></a>
                 </md-avatar>
 

@@ -7,17 +7,11 @@
 @import '~vue-material/src/components/MdLayout/layout';
 @import "~vue-material/src/components/MdAnimation/variables";
 html {
-  border: {
-  color: $color__tuatara;
-  font-size: 16px;
+  background: $color__grey;
   height: auto !important;
-    bottom: 0;
-    color: $color_-trout;
-    left: $space--md;
-    right: $space--md;
-    style: solid;
-    top: $space--md;
-  }
+  font-size: 16px;
+  border-left: $color__grey solid $space--md;
+  border-right: $color__grey solid $space--md;
   .md-scrollbar::-webkit-scrollbar {
     -webkit-overflow-scrolling: touch;
     /* has to be scroll, not auto */
@@ -51,7 +45,7 @@ html {
     height: $space--md;
     position: fixed;
     width: 100%;
-    background: $color__tuatara;
+    background: $color__grey;
     z-index: 20;
   }
   &::after {
